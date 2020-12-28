@@ -1,67 +1,55 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <SiteTitle />
-      <nuxt-content :document="page" />
-    </div>
-  </div>
+  <Container>
+    <Header />
+    <ul class="article-list">
+      <li v-for="article in articles" :key="article.createdAt">
+        <nuxt-link class="link" :to="article.path">
+          <span class="title">{{ article.title }}</span>
+          <span class="created">{{ toDate(article.createdAt) }}</span>
+          <p class="description">{{ article.description }}</p>
+        </nuxt-link>
+      </li>
+    </ul>
+  </Container>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import day from "dayjs";
 
 export default Vue.extend({
-  data: () => ({
-    page: {
-      title: "",
-    },
-  }),
   async asyncData({ $content }) {
-    const page = await $content("hello").fetch();
+    const articles = await $content("articles").fetch();
 
     return {
-      page,
+      articles,
     };
   },
-  head() {
-    return {
-      title: this.page.title,
-      meta: [],
-    };
+  methods: {
+    toDate(datetime: string) {
+      return day(datetime).format("YYYY-MM-DD");
+    },
   },
 });
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style lang="postcss" scoped>
+.article-list {
+  margin-top: 64px;
+  & > li {
+    .link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #444444;
+      text-align: left;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #444444;
+    }
+  }
 }
 </style>

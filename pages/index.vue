@@ -18,17 +18,10 @@ import Vue from "vue";
 import day from "dayjs";
 
 export default Vue.extend({
-  data: () => ({
-    page: {
-      title: "",
-    },
-  }),
   async asyncData({ $content }) {
-    const page = await $content("hello").fetch();
     const articles = await $content("articles").fetch();
 
     return {
-      page,
       articles,
     };
   },

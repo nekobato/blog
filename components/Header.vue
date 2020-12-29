@@ -39,6 +39,9 @@ nav {
     display: inline-flex;
     width: 72px;
     height: 72px;
+    border: 1px solid #efefef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
   }
   .source {
     width: 100%;

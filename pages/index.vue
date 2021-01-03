@@ -1,6 +1,5 @@
 <template>
   <Container>
-    <Header />
     <ul class="article-list">
       <li v-for="article in articles" :key="article.createdAt">
         <nuxt-link class="link" :to="article.path">
@@ -36,9 +35,11 @@ export default Vue.extend({
 <style lang="postcss" scoped>
 .article-list {
   margin-top: 64px;
+  min-height: 100vh;
   & > li {
     .link {
       display: block;
+      margin-top: 40px;
       width: 100%;
       height: 100%;
       text-decoration: none;

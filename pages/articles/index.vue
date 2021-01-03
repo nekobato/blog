@@ -1,6 +1,5 @@
 <template>
   <Container>
-    <Header />
     <ul class="article-list">
       <li v-for="article in articles" :key="article.createdAt">
         <nuxt-link class="link" :to="article.path">

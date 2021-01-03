@@ -72,6 +72,12 @@ export default Vue.extend({
 
 スタイルはこのブログのためのものなので、よしなに
 
+## 画面
+
+こんな感じになる。
+
+![image](https://user-images.githubusercontent.com/861170/103482997-91b23b00-4e27-11eb-826d-d268466ec4ad.png)
+
 ## ブックマークレット
 
 対象の Amazon 商品ページ上で実行すればそのまま目的のタグが得られるブックマークレットを置いておく。

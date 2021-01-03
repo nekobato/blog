@@ -1,6 +1,5 @@
 <template>
   <Container>
-    <Header />
     <article>
       <h1>{{ article.title }}</h1>
       <nuxt-content class="body" :document="article" />

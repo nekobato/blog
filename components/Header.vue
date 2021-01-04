@@ -5,7 +5,7 @@
       <picture class="image">
         <img class="source" src="~/assets/images/logo.png" alt="ロゴ" />
       </picture>
-      <a class="link" href="https://nekobato.net">Timeline</a>
+      <a class="link" href="/">Article LOG</a>
     </nav>
     <div class="title-group">
       <h1>nekobatoken</h1>

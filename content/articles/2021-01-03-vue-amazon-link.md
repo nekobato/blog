@@ -1,6 +1,7 @@
 ---
 title: はてなっぽいAmazon Linkを作る with Vue
 description: "自分の Blog ではてなで表示するっぽい Amazon アソシエイト リンクを貼りたい"
+createdAt: "2021-01-03"
 ---
 
 ## 概要

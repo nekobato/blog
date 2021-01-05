@@ -20,8 +20,36 @@ export default Vue.extend({
   },
   head() {
     return {
-      title: this.$data.article.title,
-      meta: [],
+      title: `${this.$data.article.title} - nekobatoken`,
+      description: this.$data.article.description,
+      type: "article",
+      url: `https://blog.nekobato.net/articles/${this.$data.article.slug}`,
+      image: `https://blog.nekobato.net/image.png`,
+      meta: [
+        { hid: "description", name: "description", content: "nekobato blog" },
+        { hid: "og:site_name", property: "og:site_name", content: "nekobatoken" },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: `https://blog.nekobato.net/articles/${this.$data.article.slug}`,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: `${this.$data.article.title} - nekobatoken`,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$data.article.description,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `https://blog.nekobato.net/image.png`,
+        },
+      ],
     };
   },
 });

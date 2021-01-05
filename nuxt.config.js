@@ -11,12 +11,12 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description,
+        content: "nekobatoのblog",
       },
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "ページタイトル",
+        content: "nekobatoken",
       },
       { hid: "og:type", property: "og:type", content: "blog" },
       {
@@ -28,12 +28,12 @@ export default {
       {
         hid: "og:description",
         property: "og:description",
-        content: "デフォルトのディスクリプションを設定するよ",
+        content: "nekobato blog",
       },
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://サイトのUR/og.jpg",
+        content: "https://blog.nekobato.net/image.png",
       },
       {
         hid: "twitter:card",
@@ -41,7 +41,7 @@ export default {
         content: "summary_large_image",
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/assets/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

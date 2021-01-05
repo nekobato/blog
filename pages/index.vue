@@ -29,17 +29,6 @@ export default Vue.extend({
       return day(datetime).format("YYYY-MM-DD");
     },
   },
-
-  head() {
-    return {
-      title: `${this.$data.article.title} - nekobatoken`,
-      description: this.$data.article.description,
-      type: "article",
-      url: `https://blog.nekobato.net/`,
-      image: `https://blog.nekobato.net/image.png`,
-      meta: [{ hid: "description", name: "description", content: "nekobato blog" }],
-    };
-  },
 });
 </script>
 

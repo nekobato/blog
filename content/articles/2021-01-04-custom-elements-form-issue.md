@@ -1,5 +1,5 @@
 ---
-title: Web ComponentsでInputを使う方法
+title: Web ComponentsでInputを扱う方法
 createdAt: "2021-01-04"
 ---
 
@@ -7,7 +7,9 @@ createdAt: "2021-01-04"
 
 Custom Elements(Web Components)の中で`input`を使うと色々問題がある
 
-### `button`を押しても submit が動かない
+<!--more-->
+
+### 1. `button`を押しても submit が動かない
 
 例えばこのような form があった時、この`button`を押しても form の submit は発火しない。
 
@@ -15,14 +17,15 @@ Custom Elements(Web Components)の中で`input`を使うと色々問題がある
 <form>
   ...
   <button-component>
-  #shadow-dom
+    #shadow-dom
     <button type="submit">Submit</button>
+  </button-component>
 </form>
 ```
 
 submit の動作は別 DOM Tree、この場合 Shadow DOM から見て Light DOM の Tree にある form に到達しない。
 
-###  外部の`input`と連携してくれない
+### 2. 外部の`input`と連携してくれない
 
 これが特に問題になるのは主に`autocomplete`を使用したい時で、他の input と`autocomplete`の挙動を連携してくれなくなってしまう。
 
@@ -37,22 +40,24 @@ https://developer.mozilla.org/ja/docs/Web/HTML/Attributes/autocomplete
 </form>
 ```
 
-住所も然り。
+住所とかも然り。
 
 Custom Elements で input の wrapper component を作ると、それぞれ別の DOM Tree であるからか、 入力候補は連携してくれない。
 
 ```html
 <form>
-  <text-field-Component>
-  #shadow-dom
-    <input autocomplete="given-name">
-  <text-field-Component>
-  #shadow-dom
-    <input autocomplete="family-name">
+  <text-field-component>
+    #shadow-dom
+    <input autocomplete="given-name" />
+  </text-field-component>
+  <text-field-component>
+    #shadow-dom
+    <input autocomplete="family-name" />
+  </text-field-component>
 </form>
 ```
 
-### `form`の submit では Shadow DOM 内の input value を拾ってくれない
+### 3. `form`の submit では Shadow DOM 内の input value を拾ってくれない
 
 上述のものと同じく、別 Tree の input value は検出してくれない。
 
@@ -62,7 +67,7 @@ Custom Elements で input の wrapper component を作ると、それぞれ別�
 
 解決法は主に 3 つある。もっとあったらおしえてください。
 
-### Shadown DOM ではなく Light DOM に表示する
+### 1. Shadown DOM ではなく Light DOM に表示する
 
 Custom Element の中身を Light DOM に表示するようにすることで、単純に他の Element から影響を受けられるようにする。
 もちろん Shadow DOM ではないので隠蔽はされず、他からの改変が容易になる。
@@ -86,9 +91,9 @@ class LightDom extends LitElement {
 
 https://lit-element.polymer-project.org/guide/templates#renderroot
 
-注意点としては、Light DOM での表示を指定すると`<slot>`が使えなくなる。それ以上の柔軟な変更は attribute を使うしかないということになる。
+注意点としては、Light DOM での表示を指定すると`<slot>`が使えなくなる。それ以上の柔軟なコンテンツ変更は attribute を使うしかないということになる。
 
-### input はコンポーネントにしない
+### 2. input はコンポーネントに含めず、コンポーネントは input の wrapper とする
 
 このように
 
@@ -100,11 +105,19 @@ return html`
 `;
 ```
 
+```html
+<text-field-container>
+  <input />
+</text-field-container>
+```
+
 スタイルなどは Custom Element が受け持つが、実際の input Element は Light DOM に置く。
-この方法だとスタイリングなどは可能だが、input の値をバキバキに改変する機能などを実装するのは大変面倒になる。というかあまり現実的ではないと思う。
+この方法だと input タグのスタイリングなどは可能だが、input の値をバキバキに改変する機能などを実装するのは大変面倒になる。というかそういった機能はこの場合あまり現実的ではないと思う。
 その上、input は外部から簡単にアクセス可能な場所に置くことになるため、Custom Element としてコンポーネントに縛りを持たせるのは難しい。
 
-### autocomplete 連携を諦めて、挙動を自前で作る
+「input には何も css も attributes も付けないでね！」などの注意書きが必要になる。
+
+### 3. autocomplete 連携を諦めて、挙動を自前で作る
 
 もしくは、どうせフレームワーク使うでしょという方針でネイティブ挙動は何もサポートしない。
 

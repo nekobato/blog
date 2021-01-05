@@ -1,10 +1,10 @@
 <template>
   <Container>
     <ul class="article-list">
-      <li v-for="article in articles" :key="article.createdAt">
+      <li v-for="article in articles" :key="article.created">
         <nuxt-link class="link" :to="article.path">
           <span class="title">{{ article.title }}</span>
-          <span class="created">{{ toDate(article.createdAt) }}</span>
+          <span class="created">{{ article.created }}</span>
           <p class="description">{{ article.description }}</p>
         </nuxt-link>
       </li>

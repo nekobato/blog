@@ -1,11 +1,13 @@
 ---
-title: Web Componentsの中で<a>が使いにくい
+title: Web Componentsとフレームワークを組み合わせると、<a>が使いにくい
 createdAt: "2021-01-20"
 ---
 
 ## 便利なフレームワークのルータライブラリと衝突する Anchor Tag
 
 コンポーネントの中に`<a>`を入れたい時、例えばテキストリンクを Web Component にしたいとする。
+
+<!--more-->
 
 ```html
 <my-link href="https://">テキストリンクだよ</my-link>

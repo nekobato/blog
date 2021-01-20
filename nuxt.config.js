@@ -60,7 +60,16 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/axios", "@nuxt/content"],
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxt/content",
+    [
+      "@nuxtjs/google-gtag",
+      {
+        id: "G-H8F4C1GZ0F",
+      },
+    ],
+  ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

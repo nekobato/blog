@@ -1,7 +1,7 @@
 <template>
   <Container>
     <ul class="article-list">
-      <li v-for="article in articles" :key="article.created">
+      <li v-for="article in sortedArticles" :key="article.createdAt">
         <nuxt-link class="link" :to="article.path">
           <span class="title">{{ article.title }}</span>
           <span class="created">{{ article.created }}</span>
@@ -23,6 +23,13 @@ export default Vue.extend({
     return {
       articles,
     };
+  },
+  computed: {
+    sortedArticles() {
+      return this.$data.articles.sort((a: any, b: any) => {
+        return a.createdAt < b.createdAt ? -1 : a.createdAt > b.createdAt ? 1 : 0;
+      });
+    },
   },
   methods: {
     toDate(datetime: string) {

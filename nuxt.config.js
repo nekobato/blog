@@ -85,6 +85,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true,
     postcss: {
       // キーとしてプラグイン名を、値として引数を追加します
       // プラグインは前もって npm か yarn で dependencies としてインストールしておきます

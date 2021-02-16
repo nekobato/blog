@@ -1,0 +1,54 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head>
+    <title>Web Componentsで作られているDesign System ライブラリ - nekobatoken</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="og:description" property="og:description" content="nekobato blog"><meta data-n-head="ssr" data-hid="twitter:card" neme="twitter:card" content="summary_large_image"><meta data-n-head="ssr" data-hid="description" name="description" content="nekobato blog"><meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="nekobatoken"><meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website"><meta data-n-head="ssr" data-hid="og:url" property="og:url" content="https://blog.nekobato.net/articles/2021-02-16-web-component-ds-list"><meta data-n-head="ssr" data-hid="og:title" property="og:title" content="Web Componentsで作られているDesign System ライブラリ - nekobatoken"><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://blog.nekobato.net/image.png"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><script data-n-head="ssr" src="https://www.googletagmanager.com/gtag/js?id=G-H8F4C1GZ0F" async></script><link rel="preload" href="/_nuxt/b47f2d0.js" as="script"><link rel="preload" href="/_nuxt/7e2a068.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.eb6d3d4.css" as="style"><link rel="preload" href="/_nuxt/b811a8a.js" as="script"><link rel="preload" href="/_nuxt/app.be1bb9f.css" as="style"><link rel="preload" href="/_nuxt/da67d0f.js" as="script"><link rel="preload" href="/_nuxt/pages/articles/_slug.9a638fd.css" as="style"><link rel="preload" href="/_nuxt/2f3e456.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.eb6d3d4.css"><link rel="stylesheet" href="/_nuxt/app.be1bb9f.css"><link rel="stylesheet" href="/_nuxt/pages/articles/_slug.9a638fd.css"><link rel="preload" href="/_nuxt/static/1613479219/articles/2021-02-16-web-component-ds-list/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1613479219/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><header data-v-4bd01cdf><nav data-v-4bd01cdf><a href="https://nekobato.net" class="link" data-v-4bd01cdf>About me</a> <picture class="image" data-v-4bd01cdf><img src="/_nuxt/img/logo.d866ef5.png" alt="ロゴ" class="source" data-v-4bd01cdf></picture> <a href="/" class="link" data-v-4bd01cdf>LOG</a></nav> <div class="title-group" data-v-4bd01cdf><h1 data-v-4bd01cdf>nekobatoken</h1></div></header> <div class="container" data-v-18bccaa8 data-v-d83be920><article data-v-18bccaa8 data-v-d83be920><h1 data-v-18bccaa8 data-v-d83be920>Web Componentsで作られているDesign System ライブラリ</h1> <div class="body nuxt-content" data-v-18bccaa8 data-v-d83be920><p data-v-18bccaa8 data-v-d83be920>1 から Design System を作る場合にも、色々参考にするのが手っ取り早い。</p>
+<p data-v-18bccaa8 data-v-d83be920>Web Components にも色々問題は依然あれど、既に先人によるオープンソースなレポジトリがあるので、代表的なものを一覧にしてみる。</p>
+<h2 id="ioniccore" data-v-18bccaa8 data-v-d83be920><a href="#ioniccore" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>@ionic/core</h2>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://github.com/ionic-team/ionic-framework/tree/master/core" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://github.com/ionic-team/ionic-framework/tree/master/core</a></p>
+<p data-v-18bccaa8 data-v-d83be920>ionic core は ionic チームが ionic frmework で使うコンポーネントを Web Component で実装した Design System。ionic は基本的に  モバイルアプリケーションを作るためのツールなのでそれ用に機能が最適化されているきらいはあるが、汎用的な部分の実装手段など参考になる部分は多い。</p>
+<p data-v-18bccaa8 data-v-d83be920>Stencil という Web Components 技術でコンポーネントを作るための独自フレームワークで作られており、実際便利。
+Stencil は lit-element と勢力を２分する程度に栄えているライブラリです。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://stenciljs.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://stenciljs.com/</a></p>
+<h2 id="adobe-spectrum" data-v-18bccaa8 data-v-d83be920><a href="#adobe-spectrum" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>Adobe Spectrum</h2>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://opensource.adobe.com/spectrum-web-components/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://opensource.adobe.com/spectrum-web-components/</a></p>
+<p data-v-18bccaa8 data-v-d83be920>Adobe がヌルっと出してる Design System。 バージョニングをコンポーネントごとにしてる。共通の util 部分がアップデートされたらどうするんだろう...
+説明によると Adobe プロダクトのプロトタイピングのためのもの（もしくはもっと実用的なもの）？らしいけども、内部でどのように採用されているかはどうなんでしょう。</p>
+<p data-v-18bccaa8 data-v-d83be920>lit-element 製。</p>
+<p data-v-18bccaa8 data-v-d83be920>Github: <a href="https://github.com/adobe/spectrum-web-components" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://github.com/adobe/spectrum-web-components</a></p>
+<h2 id="carbon" data-v-18bccaa8 data-v-d83be920><a href="#carbon" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>carbon</h2>
+<p data-v-18bccaa8 data-v-d83be920>IBM 製。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://github.com/carbon-design-system/carbon-web-components" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://github.com/carbon-design-system/carbon-web-components</a></p>
+<p data-v-18bccaa8 data-v-d83be920>carbon-web-components</p>
+<p data-v-18bccaa8 data-v-d83be920>まず Carbon という IBM による Design System があって、これはその Web Component 版 (variant)という扱い。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://www.carbondesignsystem.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://www.carbondesignsystem.com/</a></p>
+<p data-v-18bccaa8 data-v-d83be920>Carbon 自体も Vue, React, Angular に対応して更に Web Component variant もあって...とても大企業を感じる。</p>
+<p data-v-18bccaa8 data-v-d83be920>Storybook からサクッと各コンポーネントの振る舞いを見れる。やっぱ Design System には Storybook が最高ってことだね。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://web-components.carbondesignsystem.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://web-components.carbondesignsystem.com/</a></p>
+<h2 id="fast" data-v-18bccaa8 data-v-d83be920><a href="#fast" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>Fast</h2>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://www.fast.design/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://www.fast.design/</a></p>
+<p data-v-18bccaa8 data-v-d83be920>Microsoft による Design System でもある UI Component コレクション。</p>
+<p data-v-18bccaa8 data-v-d83be920>Fast Component は Fast Element という独自のライブラリによって書かれている。</p>
+<p data-v-18bccaa8 data-v-d83be920>Fast Component 自体も一つの提供された Design System だけれども、Fast Element を使って自分のカスタムコンポーネントを新たに作り出すこともできるらしい。試したことない。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://www.fast.design/docs/fast-element/getting-started" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://www.fast.design/docs/fast-element/getting-started</a></p>
+<p data-v-18bccaa8 data-v-d83be920>つまり ionic/core と Stenciljs みたいな関係ということだろうか。Web Component の構築も独自路線のようなので、詳しい試用体験の記事などあったら見たい。</p>
+<h2 id="clarity" data-v-18bccaa8 data-v-d83be920><a href="#clarity" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>clarity</h2>
+<p data-v-18bccaa8 data-v-d83be920>VMware 製。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://github.com/vmware/clarity" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://github.com/vmware/clarity</a></p>
+<p data-v-18bccaa8 data-v-d83be920>元は Angular で作られていた Design System? 今は Web Compoennt による実装に移行しようとしているらしい。</p>
+<p data-v-18bccaa8 data-v-d83be920>内部では lit-element が利用されている。</p>
+<h2 id="design-system-libary-をまとめている-web-サイト" data-v-18bccaa8 data-v-d83be920><a href="#design-system-libary-%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E3%81%84%E3%82%8B-web-%E3%82%B5%E3%82%A4%E3%83%88" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>Design System Libary をまとめている Web サイト</h2>
+<p data-v-18bccaa8 data-v-d83be920>少し情報が古いかもしれないけれども、このサイトでは Design System の情報をまとめています。
+一覧の中に「Web Components が使われているか」という項目もあるのでそこから探すのも良さそう。
+ただほんの一部扱っているだけでも<code data-v-18bccaa8 data-v-d83be920>yes</code>扱いになっているようなので、Web Component を基盤技術として作られているわけではないのに注意。</p>
+<p data-v-18bccaa8 data-v-d83be920>上記のプロダクト群も、こちらには反映されてなかったり、情報が古かったりする。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://adele.uxpin.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://adele.uxpin.com/</a></p>
+<h2 id="まとめ" data-v-18bccaa8 data-v-d83be920><a href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-hidden="true" tabindex="-1" data-v-18bccaa8 data-v-d83be920><span class="icon icon-link" data-v-18bccaa8 data-v-d83be920></span></a>まとめ</h2>
+<p data-v-18bccaa8 data-v-d83be920>Web Component による Design System、将来の Web を見据えた場合最適解にも思えるが、現状ではガッツがある大企業が悩みながら作っているという風に見える。</p>
+<p data-v-18bccaa8 data-v-d83be920>ブラウザが Web Component の不便さを消してくれるのが先か、落とし穴を全て埋めたライブラリが出てくるのが先かはわからないが、軽いノリで手を出せる領域ではないですね。</p>
+<p data-v-18bccaa8 data-v-d83be920>他にもこれを忘れてるぜ！みたいな情報があったらこちらまで教えてほしいです。</p>
+<p data-v-18bccaa8 data-v-d83be920><a href="https://twitter.com/nekobato" rel="nofollow noopener noreferrer" target="_blank" data-v-18bccaa8 data-v-d83be920>https://twitter.com/nekobato</a></p></div></article></div> <footer data-v-3a194372></footer></div></div></div><script>window.__NUXT__={staticAssetsBase:"/_nuxt/static/1613479219",layout:"default",error:null,serverRendered:!0,routePath:"/articles/2021-02-16-web-component-ds-list",config:{content:{dbHash:"361b759e"}}}</script><script src="/_nuxt/b47f2d0.js" defer></script><script src="/_nuxt/2f3e456.js" defer></script><script src="/_nuxt/7e2a068.js" defer></script><script src="/_nuxt/b811a8a.js" defer></script><script src="/_nuxt/da67d0f.js" defer></script>
+  </body>
+</html>
